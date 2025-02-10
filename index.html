@@ -3,302 +3,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Housing and Climate Progressive Democratic Slate - AD18</title>
+    <title>AD18 ADEMs Progressive Slate</title>
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <!-- Custom CSS -->
+    <link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: var(--primary-color);">
         <div class="container">
-            <a class="navbar-brand" href="#">AD18 Progressive Slate</a>
+            <a class="navbar-brand" href="#">AD18 ADEMs Progressive Slate</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="#candidates">Candidates</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#vote">How to Vote</a>
+                        <a class="nav-link" href="#voting">How to Vote</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#why">Why ADEMs Matter</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <header class="hero bg-light py-5">
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="btn rounded-circle" aria-label="Scroll to top">
+        <i class="arrow-up">⬆</i>
+    </button>
+
+    <!-- Hero Section -->
+    <section class="hero">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
-                    <h1 class="display-4">Housing and Climate Progressive Democratic Slate</h1>
-                    <p class="lead">Vote for progressive change in Assembly District 18</p>
-                    <a href="#vote" class="btn btn-success btn-lg">Learn How to Vote</a>
+                    <h1>Progressive Values, Real Progress for AD18</h1>
+                    <p class="lead">Join us in electing Democratic Party delegates who combine strong progressive principles with a commitment to delivering meaningful change on housing affordability, climate action, and community well-being.</p>
+                    <a href="#voting" class="btn btn-primary btn-lg">Learn How to Vote</a>
                 </div>
                 <div class="col-lg-6">
-                    <img src="images/ADEMs-AD18-Slate 03.png" alt="AD18 Slate Card" class="img-fluid rounded shadow">
+                    <img src="images/ADEMs-AD18-Slate 03.png" alt="AD18 Progressive Slate" class="img-fluid rounded">
                 </div>
             </div>
         </div>
-    </header>
+    </section>
 
-    <main>
-        <section id="candidates" class="py-5">
-            <div class="container">
-                <h2 class="text-center mb-5">Our Candidates</h2>
-                <div class="row">
-                    <!-- Lauren Wilson -->
-                    <div class="col-md-4 col-sm-6 text-center">
-                        <div class="candidate-card">
-                            <img src="images/AD-18 Candidate Headshots/Lauren Wilson.jpg" alt="Lauren Wilson" class="candidate-img">
-                            <h3>Lauren Wilson</h3>
-                            <p class="text-muted">Transportation and Urban Planning Policy Advocate</p>
-                            <p class="small">Former California State Assembly representative in DC, active SPUR advisory board member, and advocate for LGBTQ rights and urban planning.</p>
-                        </div>
-                    </div>
-
-                    <!-- Ben Gould -->
-                    <div class="col-md-4 col-sm-6 text-center">
-                        <div class="candidate-card">
-                            <img src="images/AD-18 Candidate Headshots/Ben Gould.jpg" alt="Ben Gould" class="candidate-img">
-                            <h3>Ben Gould</h3>
-                            <p class="text-muted">Environmental Policy Consultant</p>
-                            <p class="small">Climate policy consultant and community organizer, leading successful campaigns for safer streets and better housing in Berkeley.</p>
-                        </div>
-                    </div>
-
-                    <!-- Genice Jacobs -->
-                    <div class="col-md-4 col-sm-6 text-center">
-                        <div class="candidate-card">
-                            <img src="images/AD-18 Candidate Headshots/Genice Jacobs.JPG" alt="Genice Jacobs" class="candidate-img">
-                            <h3>Genice Jacobs</h3>
-                            <p class="text-muted">Anti-Trafficking Activist</p>
-                            <p class="small">15+ years of advocacy against human trafficking, founder of Abolitionist Mom and key contributor to California's trafficking prevention legislation.</p>
-                        </div>
-                    </div>
-
-                    <!-- Arielle Fleisher -->
-                    <div class="col-md-4 col-sm-6 text-center">
-                        <div class="candidate-card">
-                            <img src="images/AD-18 Candidate Headshots/Arielle Fleisher.png" alt="Arielle Fleisher" class="candidate-img">
-                            <h3>Arielle Fleisher</h3>
-                            <p class="text-muted">Transportation Policy Advisor</p>
-                            <p class="small">Former SPUR Transportation Policy Director, Bay Area Council Transportation Committee Co-Chair, and founder of Pandemic Moms Club.</p>
-                        </div>
-                    </div>
-
-                    <!-- Regina Chagolla -->
-                    <div class="col-md-4 col-sm-6 text-center">
-                        <div class="candidate-card">
-                            <img src="images/AD-18 Candidate Headshots/Regina Chagolla.webp" alt="Regina Chagolla" class="candidate-img">
-                            <h3>Regina Chagolla</h3>
-                            <p class="text-muted">Education Advocate</p>
-                            <p class="small">Vice President of Emery Unified School Board, VP of Berkeley Federation of Teachers, and advocate for public education and working rights.</p>
-                        </div>
-                    </div>
-
-                    <!-- Sam Davis -->
-                    <div class="col-md-4 col-sm-6 text-center">
-                        <div class="candidate-card">
-                            <img src="images/AD-18 Candidate Headshots/Sam Davis.jpg" alt="Sam Davis" class="candidate-img">
-                            <h3>Sam Davis</h3>
-                            <p class="text-muted">Oakland School Board President</p>
-                            <p class="small">Former teacher and parent activist leading initiatives for college readiness, fiscal sustainability, and equitable facilities funding.</p>
-                        </div>
-                    </div>
-
-                    <!-- Sam Gould -->
-                    <div class="col-md-4 col-sm-6 text-center">
-                        <div class="candidate-card">
-                            <img src="images/AD-18 Candidate Headshots/Sam Gould.jpg" alt="Sam Gould" class="candidate-img">
-                            <h3>Sam Gould</h3>
-                            <p class="text-muted">Housing and Safe Streets Advocate</p>
-                            <p class="small">Video game developer and former Bicycle and Pedestrian Advisory Committee member advocating for safe and accessible transportation.</p>
-                        </div>
-                    </div>
-
-                    <!-- Nate Hanson -->
-                    <div class="col-md-4 col-sm-6 text-center">
-                        <div class="candidate-card">
-                            <img src="images/AD-18 Candidate Headshots/Nate Hanson.jpg" alt="Nate Hanson" class="candidate-img">
-                            <h3>Nate Hanson</h3>
-                            <p class="text-muted">Affordable Housing Developer</p>
-                            <p class="small">Leading affordable housing development at Related California, spearheading a 600-unit project at Jack London Square.</p>
-                            <button class="btn btn-outline-success mt-2" data-bs-toggle="modal" data-bs-target="#nateModal">Read More</button>
-                        </div>
-                    </div>
-
-                    <!-- Shawn Danino -->
-                    <div class="col-md-4 col-sm-6 text-center">
-                        <div class="candidate-card">
-                            <img src="images/AD-18 Candidate Headshots/Shawn Danino.jpg" alt="Shawn Danino" class="candidate-img">
-                            <h3>Shawn Danino</h3>
-                            <p class="text-muted">Housing/Mobility Policymaker</p>
-                            <p class="small">Public servant and housing expert who has helped pass laws supporting working families and spearheaded affordable housing initiatives.</p>
-                        </div>
-                    </div>
-
-                    <!-- Bobbi Lopez -->
-                    <div class="col-md-4 col-sm-6 text-center">
-                        <div class="candidate-card">
-                            <img src="images/AD-18 Candidate Headshots/Bobbi Lopez.jpeg" alt="Bobbi Lopez" class="candidate-img">
-                            <h3>Bobbi Lopez</h3>
-                            <p class="text-muted">Victim Services Deputy</p>
-                            <p class="small">LGBTQ immigrant rights advocate, former ACDCC member, and founder of La Voz Latina working in victim services and policy.</p>
-                        </div>
-                    </div>
-
-                    <!-- Ashlee Jemmott -->
-                    <div class="col-md-4 col-sm-6 text-center">
-                        <div class="candidate-card">
-                            <img src="images/AD-18 Candidate Headshots/Ashlee Jemmott.png" alt="Ashlee Jemmott" class="candidate-img">
-                            <h3>Ashlee Jemmott</h3>
-                            <p class="text-muted">Deputy Policy Analyst</p>
-                            <p class="small">Community organizer and nonprofit leader with over 11 years of experience in youth development and social justice.</p>
-                        </div>
-                    </div>
-
-                    <!-- Zac Bowling -->
-                    <div class="col-md-4 col-sm-6 text-center">
-                        <div class="candidate-card">
-                            <img src="images/AD-18 Candidate Headshots/Zac Bowling.webp" alt="Zac Bowling" class="candidate-img">
-                            <h3>Zac Bowling</h3>
-                            <p class="text-muted">Housing Activist</p>
-                            <p class="small">Co-founder of East Bay YIMBY, union organizer, and digital advocate for housing affordability with 140,000+ followers.</p>
-                        </div>
-                    </div>
-
-                    <!-- Cathy Adams -->
-                    <div class="col-md-4 col-sm-6 text-center">
-                        <div class="candidate-card">
-                            <img src="images/AD-18 Candidate Headshots/Cathy Adams.jpg" alt="Cathy Adams" class="candidate-img">
-                            <h3>Cathy Adams</h3>
-                            <p class="text-muted">Chamber of Commerce President</p>
-                            <p class="small">President/CEO of Oakland African American Chamber of Commerce, leading business support and affordable housing initiatives.</p>
-                        </div>
-                    </div>
-                </div>
+    <!-- Candidates Section -->
+    <section id="candidates" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Housing & Climate Progressive Democrats</h2>
+            <div class="row" id="candidateCards">
+                <!-- Candidate cards will be loaded here via JavaScript -->
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="vote" class="py-5 bg-light">
-            <div class="container">
-                <h2 class="text-center mb-4">How to Vote</h2>
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="card shadow mb-4">
-                            <div class="card-body">
-                                <h3 class="card-title">Important Voting Information</h3>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">
-                                        <strong>Register by January 24th, 2025</strong> at 
-                                        <a href="https://adem.cadem.org" target="_blank" rel="noopener noreferrer">adem.cadem.org</a>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <strong>Who can vote:</strong> Registered Democrats in Assembly District 18 (Oakland, Alameda, San Leandro, and Emeryville)
-                                    </li>
-                                    <li class="list-group-item">
-                                        <strong>How to vote:</strong>
-                                        <ul class="mt-2">
-                                            <li>Choose electronic or in-person voting when registering</li>
-                                            <li>For electronic voting, credentials will be mailed by January 31st, 2025</li>
-                                            <li>Use the ElectionBuddy link and provided credentials to access your ballot</li>
-                                            <li>Vote for all 12 candidates on our slate</li>
-                                        </ul>
-                                    </li>
+    <!-- Candidate Modals -->
+    <div id="candidateModals">
+        <!-- Candidate modals will be loaded here via JavaScript -->
+    </div>
+
+    <!-- Voting Section -->
+    <section id="voting" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">How to Vote</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <h5 class="card-title">Important Voting Information</h5>
+                            <p class="card-text">To vote in the AD18 Assembly District Election Meeting (ADEM), you must:</p>
+                            <ol>
+                                <li>Be a registered Democrat living in Assembly District 18</li>
+                                <li>Register with CADEM to receive your ballot and verify eligibility</li>
+                            </ol>
+                            
+                            <h5 class="mt-4">Two Ways to Vote</h5>
+                            <div class="mt-3">
+                                <h6>1. Online Voting</h6>
+                                <ul>
+                                    <li>Register by January 24, 2025 at 12:00 PM</li>
+                                    <li>Receive voting credentials by mail by January 31, 2025</li>
+                                    <li>Vote using the ElectionBuddy platform</li>
+                                </ul>
+                                
+                                <h6>2. In-Person Voting</h6>
+                                <ul>
+                                    <li>Register by February 23, 2025 at 6:00 PM</li>
+                                    <li>Bring your identification code to the voting location</li>
+                                    <li>Fill out a paper ballot</li>
                                 </ul>
                             </div>
-                        </div>
-
-                        <div class="card shadow">
-                            <div class="card-body">
-                                <h3 class="card-title">Why ADEMs Matter</h3>
-                                <p>Assembly District Election Meetings (ADEMs) are your opportunity to shape the California Democratic Party from the ground up. Delegates:</p>
-                                <ul class="list-unstyled">
-                                    <li>✓ Vote on party endorsements for state and local elections</li>
-                                    <li>✓ Shape the California Democratic Party platform</li>
-                                    <li>✓ Represent our community's values and priorities</li>
-                                    <li>✓ Push for progressive policies on housing, climate, education, and more</li>
-                                </ul>
+                            
+                            <div class="alert alert-info mt-3">
+                                <strong>Important:</strong> You can vote for up to 14 candidates. Ballots will be voided if they include more than 14 selections or have missing/incorrect identification codes.
                             </div>
+                            
+                            <a href="https://ademelections.com" class="btn btn-primary" target="_blank">Register to Vote</a>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="priorities" class="py-5">
-            <div class="container">
-                <h2 class="text-center mb-5">Our Priorities</h2>
-                <div class="row g-4">
-                    <div class="col-md-4">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <h3 class="h5 card-title">Housing Justice</h3>
-                                <p class="card-text">Fighting for affordable housing, tenant protections, and solutions to end homelessness.</p>
+    <!-- Why ADEMs Matter Section -->
+    <section id="why" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Why Your Vote Matters</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Shape Progressive Policy</h4>
+                    <p>ADEMs help shape the California Democratic Party platform through direct participation and voting. Your vote ensures the party champions meaningful solutions for housing affordability, climate action, and community needs while staying true to progressive values.</p>
+                </div>
+                <div class="col-md-6">
+                    <h4>Advocate for Local Communities</h4>
+                    <p>Your ADEMs connect Assembly District 18's needs with state party resources and attention. From affordable housing to infrastructure improvements, we're committed to bringing progressive solutions to Alameda, Oakland, and Emeryville.</p>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <h4>Support Progressive Champions</h4>
+                    <p>ADEMs play a crucial role in endorsing Democratic candidates. By electing our slate, you help ensure support for candidates who combine progressive values with practical experience in delivering positive change for our communities.</p>
+                </div>
+                <div class="col-md-6">
+                    <h4>Strengthen Our Democratic Party</h4>
+                    <p>This is your opportunity to help build a more effective and responsive Democratic Party. We'll work to ensure the party stays true to its progressive roots while focusing on practical solutions to make real progress on housing, climate, and social justice.</p>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h4 class="card-title">Our Progressive Vision</h4>
+                            <p>The Housing and Climate Progressive Democratic Slate brings together community leaders, policy experts, and advocates committed to advancing progressive values through practical action. Our priorities:</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2"><strong>🏘️ Housing Justice:</strong> Creating effective policies for affordable housing and preventing displacement in our communities.</li>
+                                        <li class="mb-2"><strong>🌍 Climate Leadership:</strong> Advancing bold, practical solutions for climate resilience and environmental justice.</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2"><strong>⚖️ Economic Justice:</strong> Building an economy that works for everyone through progressive policies and fair opportunities.</li>
+                                        <li class="mb-2"><strong>📚 Educational Equity:</strong> Supporting strong public schools and ensuring every child has access to quality education.</li>
+                                    </ul>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <h3 class="h5 card-title">Climate Action</h3>
-                                <p class="card-text">Advancing bold climate policies, environmental justice, and green jobs.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <h3 class="h5 card-title">Economic Justice</h3>
-                                <p class="card-text">Supporting workers' rights, living wages, and equitable economic development.</p>
-                            </div>
+                            <p class="mt-3 mb-0">Vote for ADEMs who will advance progressive values while delivering real change for our communities.</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <footer class="bg-dark text-white py-4">
+    <!-- Footer -->
+    <footer class="py-4 bg-dark text-white">
         <div class="container text-center">
-            <p>Paid for by the Housing and Climate Progressive Democratic Slate</p>
+            <p>© 2024 AD18 ADEMs Progressive Slate. Paid for by the candidates.</p>
         </div>
     </footer>
 
+    <!-- Bootstrap JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Candidate Modals -->
-    <div class="modal fade" id="nateModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Nate Hanson</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <img src="images/AD-18 Candidate Headshots/Nate Hanson.jpg" alt="Nate Hanson" class="img-fluid rounded mb-3">
-                        </div>
-                        <div class="col-md-8">
-                            <h4>Affordable Housing Developer</h4>
-                            <p>Nate is running as part of the Housing and Climate Progressive Democratic Slate because he is committed to helping to make the Democratic Party work for everyday Californians. We need real solutions to the housing and homelessness crisis, comprehensive and just public safety, and meeting the needs of our most vulnerable residents, our small businesses, and our working people.</p>
-                            <p>As an affordable housing developer, Nate builds housing throughout the Bay Area for:</p>
-                            <ul>
-                                <li>Individuals with developmental disabilities</li>
-                                <li>Seniors whose homes were destroyed by wildfires caused by the climate crisis</li>
-                                <li>Families at risk of homelessness</li>
-                            </ul>
-                            <p>His mission is to help protect and house the most vulnerable in our community. Living in East Oakland and being a proud parent of an Oakland Unified School District student, he's committed to a strong public school system so that every child has access to opportunity, regardless of their starting point.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <!-- Custom JavaScript -->
+    <script src="js/candidates.js"></script>
+    <script>
+        // Scroll to Top functionality
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+        
+        // Show/hide button based on scroll position
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.style.opacity = '0.9';
+                scrollToTopBtn.style.display = 'block';
+            } else {
+                scrollToTopBtn.style.opacity = '0';
+                setTimeout(() => {
+                    if (window.pageYOffset <= 300) {
+                        scrollToTopBtn.style.display = 'none';
+                    }
+                }, 300);
+            }
+        });
+        
+        // Scroll to top when button is clicked
+        scrollToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
 </body>
 </html> 

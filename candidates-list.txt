@@ -1,0 +1,21 @@
+AD18 Progressive Slate Candidates
+
+1. Nate Hanson (nate.jpg)
+2. Regina Chagolla (regina.webp)
+3. Sam Davis (samDavis.jpg)
+4. Ben Gould (benGould.jpg)
+5. Genice Jacobs (genice.JPG)
+6. Arielle Fleisher (arielle.png)
+7. Sam Gould (samGould.jpg)
+8. Lauren Wilson (lauren.jpg)
+9. Shawn Danino (shawn.jpg)
+10. Bobbi Lopez (bobbi.jpeg)
+11. Ashlee Jemmott (ashlee.png)
+12. Zac Bowling (zac.webp)
+13. Cathy Adams (cathy.jpg)
+
+Next steps:
+1. Review each candidate's bio and statement
+2. Update modal content to match Regina's level of detail
+3. Add links to full bios and statements
+4. Ensure consistent formatting across all modals 

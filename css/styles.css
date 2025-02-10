@@ -1,56 +1,339 @@
+/* Custom Variables */
 :root {
-    --primary-color: #006B3F;  /* Dark green from the slate card */
-    --secondary-color: #0077BE;  /* Blue from the slate card */
-    --light-bg: #F5F5F5;
+    --primary-color: #006B3F;  /* Dark green from slate card */
+    --secondary-color: #0077BE;  /* Blue from slate card */
+    --accent-color: #A0D9BF;  /* Light green accent */
+    --text-color: #333333;
+    --light-bg: #f8f9fa;
 }
 
+/* Global Styles */
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    color: var(--text-color);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.7;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* Navigation */
 .navbar {
     background-color: var(--primary-color) !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 1rem 0;
+    transition: all 0.3s ease;
 }
 
+.navbar.sticky-top {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.nav-link {
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+}
+
+/* Hero Section */
 .hero {
-    background-color: var(--light-bg);
-    padding: 4rem 0;
+    background: linear-gradient(to right, var(--light-bg) 0%, #ffffff 100%);
+    padding: 6rem 0 5rem;
 }
 
-.btn-success {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
+.hero h1 {
+    font-weight: 800;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
 }
 
-.btn-success:hover {
-    background-color: darken(var(--primary-color), 10%);
-    border-color: darken(var(--primary-color), 10%);
-}
-
-.candidate-card {
-    transition: transform 0.2s;
+.hero .lead {
+    font-size: 1.25rem;
+    color: #555;
     margin-bottom: 2rem;
+}
+
+.hero ul.lead {
+    padding-left: 1.5rem;
+}
+
+.hero ul.lead li {
+    margin-bottom: 0.5rem;
+}
+
+.hero img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+.hero img:hover {
+    transform: scale(1.02);
+}
+
+/* Candidate Cards */
+.candidate-card {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: white;
 }
 
 .candidate-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1) !important;
+    border-color: var(--accent-color);
 }
 
-.candidate-img {
-    width: 200px;
-    height: 200px;
+.candidate-card img {
+    height: 250px;
     object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 1rem;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 
+.candidate-card .card-body {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.candidate-card .card-title {
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.candidate-card .card-subtitle {
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.candidate-card .btn {
+    margin-top: auto;
+}
+
+/* Candidate Modals */
+.modal-content {
+    border-radius: 12px;
+    border: none;
+}
+
+.modal-header {
+    border-bottom: 2px solid var(--primary-color);
+    padding: 1.5rem 2rem;
+    background-color: var(--light-bg);
+}
+
+.modal-body {
+    padding: 2rem;
+}
+
+.modal-title {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+/* Voting Section */
+#voting {
+    background-color: var(--light-bg);
+    padding: 5rem 0;
+}
+
+#voting h2 {
+    margin-bottom: 3rem;
+}
+
+#voting h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+#voting ul, #voting ol {
+    padding-left: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+#voting li {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+/* Why ADEMs Section */
+#why-adems {
+    background: white;
+    padding: 5rem 0;
+}
+
+#why-adems .lead {
+    color: #555;
+    font-size: 1.25rem;
+    line-height: 1.8;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color) !important;
+    padding: 2rem 0 !important;
+}
+
+footer p {
+    margin-bottom: 0;
+    font-size: 1rem;
+}
+
+/* Buttons */
+.btn {
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Scroll to Top Button */
+#scrollToTop {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    z-index: 1000;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    padding: 0;
+    font-size: 24px;
+    line-height: 1;
+    opacity: 0.9;
+}
+
+#scrollToTop:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    opacity: 1;
+    background-color: var(--secondary-color);
+}
+
+#scrollToTop .arrow-up {
+    display: block;
+    line-height: 46px;
+    text-align: center;
+}
+
+/* Responsive Adjustments */
 @media (max-width: 768px) {
     .hero {
-        text-align: center;
-        padding: 2rem 0;
+        text-align: left;
+        padding: 4rem 0;
+    }
+    
+    .hero .btn {
+        margin-bottom: 2rem;
+        width: 100%;
     }
     
     .hero img {
-        margin-top: 2rem;
+        max-width: 90%;
+        margin: 0 auto;
+        display: block;
     }
-} 
+
+    .candidate-card {
+        margin-bottom: 1.5rem;
+    }
+    
+    .candidate-card img {
+        height: 200px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .modal-body {
+        padding: 1.5rem;
+    }
+
+    #scrollToTop {
+        bottom: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+    
+    #scrollToTop .arrow-up {
+        line-height: 36px;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
