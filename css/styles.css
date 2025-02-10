@@ -1,0 +1,56 @@
+:root {
+    --primary-color: #006B3F;  /* Dark green from the slate card */
+    --secondary-color: #0077BE;  /* Blue from the slate card */
+    --light-bg: #F5F5F5;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.navbar {
+    background-color: var(--primary-color) !important;
+}
+
+.hero {
+    background-color: var(--light-bg);
+    padding: 4rem 0;
+}
+
+.btn-success {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-success:hover {
+    background-color: darken(var(--primary-color), 10%);
+    border-color: darken(var(--primary-color), 10%);
+}
+
+.candidate-card {
+    transition: transform 0.2s;
+    margin-bottom: 2rem;
+}
+
+.candidate-card:hover {
+    transform: translateY(-5px);
+}
+
+.candidate-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        text-align: center;
+        padding: 2rem 0;
+    }
+    
+    .hero img {
+        margin-top: 2rem;
+    }
+} 
