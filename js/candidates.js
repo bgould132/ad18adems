@@ -2,9 +2,11 @@
 function createCandidateCard(candidate) {
     return `
         <div class="col-md-4 col-sm-6 mb-4">
-            <div class="candidate-card" data-bs-toggle="modal" data-bs-target="#${candidate.id}Modal">
+            <div class="candidate-card" data-bs-toggle="modal" data-bs-target="#${candidate.id}Modal" role="button" tabindex="0">
                 <img src="images/AD-18 Candidate Headshots/${candidate.name}.${candidate.imageExt}" 
-                     alt="${candidate.name}" class="card-img-top">
+                     alt="${candidate.name} - ${candidate.title}" 
+                     class="card-img-top"
+                     loading="lazy">
                 <div class="card-body">
                     <h5 class="card-title">${candidate.name}</h5>
                     <h6 class="card-subtitle mb-2">${candidate.title}</h6>
@@ -18,21 +20,31 @@ function createCandidateCard(candidate) {
 // Function to create candidate modal
 function createCandidateModal(candidate) {
     return `
-        <div class="modal fade" id="${candidate.id}Modal" tabindex="-1" aria-hidden="true">
+        <div class="modal fade" id="${candidate.id}Modal" tabindex="-1" aria-labelledby="${candidate.id}ModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">${candidate.name}</h5>
+                        <h5 class="modal-title" id="${candidate.id}ModalLabel">${candidate.name}</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <div class="row">
                             <div class="col-md-4">
                                 <img src="images/AD-18 Candidate Headshots/${candidate.name}.${candidate.imageExt}" 
-                                     alt="${candidate.name}" class="img-fluid rounded mb-3">
+                                     alt="${candidate.name} - ${candidate.title}" class="img-fluid rounded mb-3">
                                 <div class="d-grid gap-2">
-                                    <a href="#" class="btn btn-outline-primary btn-sm">View Full Bio</a>
-                                    <a href="#" class="btn btn-outline-primary btn-sm">View Statement</a>
+                                    <a href="https://docs.google.com/document/d/1J1YPSGojJHr59V8M3AvoqHf8PI19PF0ws4EQFmJSX48/edit?tab=t.0" 
+                                       class="btn btn-outline-primary" 
+                                       target="_blank"
+                                       rel="noopener noreferrer">
+                                        <i class="bi bi-file-text"></i> View Full Bio
+                                    </a>
+                                    <a href="https://docs.google.com/document/d/1ue1J2XClSlZ4NSEhgbBAESkRN5YvWKGOS0j_PxmSgPE/edit?usp=sharing" 
+                                       class="btn btn-outline-primary" 
+                                       target="_blank"
+                                       rel="noopener noreferrer">
+                                        <i class="bi bi-file-text"></i> View Statement
+                                    </a>
                                 </div>
                             </div>
                             <div class="col-md-8">
@@ -170,22 +182,16 @@ const candidates = [
         shortBio: "Climate policy consultant and community organizer, leading successful campaigns for safer streets and better housing in Berkeley.",
         bio: `<p>Ben Gould has dedicated the past decade to community organizing and political advocacy in Berkeley, focusing on practical solutions to improve local governance and infrastructure. He is passionate about making government work effectively to address everyday needs and achieve progressive goals.</p>
 
-              <h5 class="mt-4">Key Accomplishments</h5>
+              <h5 class="mt-4">Ben's Leadership</h5>
               <ul>
-                  <li><b>Authored and Organized Winning Campaigns:</b> Successfully led the campaign for Berkeley's 2024 Measure FF, a citizen's initiative that will invest over $250 million in fixing Berkeley's streets and making them safer for walking and biking. This initiative addressed decades of neglect in city infrastructure.</li>
-                  <li><b>Organized Mark Humbert's Election to City Council:</b> Played a key role in organizing the winning campaign for Mark Humbert's first election to Berkeley City Council in 2022.</li>
-              </ul>
-
-              <h5 class="mt-4">Leadership Roles</h5>
-              <ul>
-                  <li>Board member for Make Oakland Better Now!</li>
-                  <li>Board member for Jewish Democratic Coalition of the Bay Area</li>
-                  <li>Steering committee member for Jewish Coalition of Berkeley</li>
-                  <li>Steering committee member for Berkeley Neighbors for Housing and Climate Action</li>
+                  <li><b>Won $260 Million for Smoother, Safer Streets:</b> Authored and organized the campaign for Berkeley's 2024 Measure FF, a citizen's initiative that will invest over $260 million in fixing Berkeley's streets and making them safer for walking and biking. This initiative addressed decades of neglect in city infrastructure.</li>
+                  <li><b>Board member</b> for Make Oakland Better Now!</li>
+                  <li><b>Board member</b> for Jewish Democratic Coalition of the Bay Area - Alameda County chapter</li>
+                  <li><b>Steering committee member</b> for Berkeley Neighbors for Housing and Climate Action</li>
               </ul>
 
               <h5 class="mt-4">Professional Experience</h5>
-              <p>Ben works as a climate policy consultant for local governments across different regions, advising them on developing and implementing effective climate action plans and sustainable policies. His work focuses on practical and impactful strategies to mitigate climate change at the local level.</p>
+              <p>Ben leads climate policy work at EcoDataLab, helping cities to measure and reduce their carbon footprints. Using cutting-edge research from UC Berkeley, he helps cities understand and reduce emissions from the food, goods, and services their residents consume, both inside and outside city boundaries. His work has supported climate action planning in major cities like New York, Seattle, and Toronto.</p>
 
               <h5 class="mt-4">Education</h5>
               <ul>

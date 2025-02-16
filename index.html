@@ -3,9 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AD18 ADEMs Progressive Slate</title>
+    <title>AD18 Housing & Climate Progressive Democrats - Elect Our Slate!</title>
+    <meta name="description" content="Join us in electing Democratic Party delegates who combine strong progressive principles with a commitment to delivering meaningful change on housing affordability, climate action, and community well-being in Assembly District 18.">
+    <meta name="keywords" content="ADEM, Assembly District 18, Democratic Party, Progressive Democrats, Housing, Climate Action, Oakland, Alameda, Emeryville">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="css/styles.css" rel="stylesheet">
 </head>
@@ -13,7 +17,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: var(--primary-color);">
         <div class="container">
-            <a class="navbar-brand" href="#">AD18 ADEMs Progressive Slate</a>
+            <a class="navbar-brand" href="#">AD18 Housing & Climate Progressive Democratic Slate</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -43,12 +47,24 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
-                    <h1>Progressive Values, Real Progress for AD18</h1>
-                    <p class="lead">Join us in electing Democratic Party delegates who combine strong progressive principles with a commitment to delivering meaningful change on housing affordability, climate action, and community well-being.</p>
-                    <a href="#voting" class="btn btn-primary btn-lg">Learn How to Vote</a>
+                    <div class="hero-content">
+                        <h1 class="animate-text">Progressive Values, Real Progress for AD18</h1>
+                        <p class="lead mb-4">Join us in electing Democratic Party delegates who combine strong progressive principles with a commitment to delivering meaningful change on:</p>
+                        <ul class="lead feature-list mb-4">
+                            <li class="feature-item">🏘️ Housing Affordability</li>
+                            <li class="feature-item">🌍 Climate Action</li>
+                            <li class="feature-item">💪 Community Well-being</li>
+                        </ul>
+                        <div class="cta-buttons">
+                            <a href="#voting" class="btn btn-primary btn-lg me-3">Learn How to Vote</a>
+                            <a href="#candidates" class="btn btn-outline-primary btn-lg">Meet Our Candidates</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-lg-6">
-                    <img src="images/ADEMs-AD18-Slate 03.png" alt="AD18 Progressive Slate" class="img-fluid rounded">
+                    <div class="hero-image-wrapper">
+                        <img src="images/ADEMs-AD18-Slate Printable.png" alt="AD18 Progressive Slate - Printable Voter Guide" class="img-fluid rounded hero-image">
+                    </div>
                 </div>
             </div>
         </div>
@@ -106,6 +122,82 @@
                             </div>
                             
                             <a href="https://ademelections.com" class="btn btn-primary" target="_blank">Register to Vote</a>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Section -->
+                    <div class="faq-section mt-5">
+                        <h3 class="text-center mb-4">Frequently Asked Questions</h3>
+                        <div class="accordion" id="votingFAQ">
+                            <div class="accordion-item">
+                                <h4 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                        What are the ADEM elections?
+                                    </button>
+                                </h4>
+                                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#votingFAQ">
+                                    <div class="accordion-body">
+                                        ADEM elections select Assembly District delegates who help shape the California Democratic Party's platform, endorse candidates, and advocate for progressive policies. These delegates represent your local community in important party decisions.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h4 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                        How do I know if I'm eligible to vote?
+                                    </button>
+                                </h4>
+                                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#votingFAQ">
+                                    <div class="accordion-body">
+                                        You are eligible to vote if you are:
+                                        <ul>
+                                            <li>A registered Democrat</li>
+                                            <li>Living in Assembly District 18 (most of Oakland, Alameda, or Emeryville)</li>
+                                            <li>Registered to vote at your current address</li>
+                                        </ul>
+                                        Not sure if you're in AD18? You can check your district at <a href="https://findyourrep.legislature.ca.gov/" target="_blank">findyourrep.legislature.ca.gov</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h4 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                        What do I need to bring for in-person voting?
+                                    </button>
+                                </h4>
+                                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#votingFAQ">
+                                    <div class="accordion-body">
+                                        For in-person voting, you'll need:
+                                        <ul>
+                                            <li>Your voter identification code (received after registration)</li>
+                                            <li>A valid form of identification</li>
+                                            <li>Proof of residence in AD18 (if your ID shows a different address)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h4 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                        How do I make sure my vote counts?
+                                    </button>
+                                </h4>
+                                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#votingFAQ">
+                                    <div class="accordion-body">
+                                        To ensure your vote counts:
+                                        <ul>
+                                            <li>Vote for no more than 14 candidates</li>
+                                            <li>Include your correct voter identification code</li>
+                                            <li>Submit your ballot before the deadline</li>
+                                            <li>Follow all instructions carefully when filling out your ballot</li>
+                                        </ul>
+                                        If voting online, make sure to complete all steps in the ElectionBuddy platform.
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -168,7 +260,7 @@
     <!-- Footer -->
     <footer class="py-4 bg-dark text-white">
         <div class="container text-center">
-            <p>© 2024 AD18 ADEMs Progressive Slate. Paid for by the candidates.</p>
+            <p>© 2024 AD18 Housing and Climate Progressive Democratic Slate. Paid for by Ben Gould.</p>
         </div>
     </footer>
 

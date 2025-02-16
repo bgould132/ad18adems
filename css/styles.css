@@ -1,10 +1,15 @@
 /* Custom Variables */
 :root {
-    --primary-color: #006B3F;  /* Dark green from slate card */
-    --secondary-color: #0077BE;  /* Blue from slate card */
-    --accent-color: #A0D9BF;  /* Light green accent */
-    --text-color: #333333;
-    --light-bg: #f8f9fa;
+    --primary-color: #006B3F;
+    --secondary-color: #0077BE;
+    --accent-color: #A0D9BF;
+    --text-color: #2A2A2A;
+    --light-bg: #F9FAFB;
+    --animation-timing: 0.3s;
+    --card-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    --border-radius-lg: 16px;
+    --border-radius-md: 12px;
+    --border-radius-sm: 8px;
 }
 
 /* Global Styles */
@@ -12,11 +17,14 @@ body {
     color: var(--text-color);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     line-height: 1.7;
+    background-color: var(--light-bg);
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
-    color: var(--primary-color);
+    color: var(--text-color);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
 }
 
 a {
@@ -32,44 +40,95 @@ a:hover {
 
 /* Navigation */
 .navbar {
-    background-color: var(--primary-color) !important;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 1px 0 rgba(0,0,0,0.08);
     padding: 1rem 0;
-    transition: all 0.3s ease;
 }
 
-.navbar.sticky-top {
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+.navbar-dark {
+    --bs-navbar-color: var(--text-color);
+    --bs-navbar-hover-color: var(--primary-color);
+    --bs-navbar-active-color: var(--primary-color);
 }
 
 .navbar-brand {
     font-weight: 700;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    color: var(--primary-color) !important;
 }
 
 .nav-link {
     font-weight: 500;
+    font-size: 0.95rem;
     padding: 0.5rem 1rem !important;
+    opacity: 0.85;
+    transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+    opacity: 1;
+    transform: translateY(-1px);
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(to right, var(--light-bg) 0%, #ffffff 100%);
-    padding: 6rem 0 5rem;
+    background: linear-gradient(135deg, #ffffff 0%, var(--light-bg) 100%);
+    padding: 8rem 0 6rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
 }
 
 .hero h1 {
-    font-weight: 800;
-    color: var(--primary-color);
+    font-size: 3.5rem;
     margin-bottom: 1.5rem;
-    line-height: 1.2;
+    background: linear-gradient(45deg, var(--text-color), var(--primary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.1;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem;
+}
+
+.feature-item {
+    margin-bottom: 1rem;
+    padding-left: 0;
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: slideInRight 0.5s ease forwards;
+}
+
+.feature-item:nth-child(1) { animation-delay: 0.3s; }
+.feature-item:nth-child(2) { animation-delay: 0.5s; }
+.feature-item:nth-child(3) { animation-delay: 0.7s; }
+
+.hero-image-wrapper {
+    position: relative;
+    transform: translateY(20px);
+    animation: floatAnimation 6s ease-in-out infinite;
+}
+
+.hero-image {
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
 }
 
 .hero .lead {
-    font-size: 1.25rem;
-    color: #555;
-    margin-bottom: 2rem;
+    font-size: 1.15rem;
+    color: var(--text-color);
+    opacity: 0.85;
+    line-height: 1.6;
 }
 
 .hero ul.lead {
@@ -94,49 +153,104 @@ a:hover {
 
 /* Candidate Cards */
 .candidate-card {
-    transition: all 0.3s ease;
+    transition: all var(--animation-timing) cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
-    border: 1px solid #eee;
-    border-radius: 8px;
+    border: none;
+    border-radius: 16px;
     overflow: hidden;
     height: 100%;
     display: flex;
     flex-direction: column;
     background: white;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .candidate-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1) !important;
-    border-color: var(--accent-color);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
 }
 
 .candidate-card img {
-    height: 250px;
+    aspect-ratio: 1;
+    width: 100%;
+    height: 300px;
     object-fit: cover;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    object-position: center 20%;
+    border-radius: 16px 16px 0 0;
+    transition: transform var(--animation-timing) ease;
+}
+
+/* Specific adjustments for individual headshots */
+.candidate-card img[src*="Arielle"] {
+    object-position: center 45%;
+}
+.candidate-card img[src*="Nate"] {
+    object-position: center 33%;
+}
+.candidate-card img[src*="Cathy"] {
+    object-position: center 15%;
+}
+.candidate-card img[src*="Zac"] {
+    object-position: center 30%;
+}
+
+.candidate-card img[src*="Sam%20Davis"], /* URL encoded space */
+.candidate-card img[src*="Sam Davis"] { /* Regular space */
+    object-position: center 25%;
+}
+
+.candidate-card img[src*="Ashlee"] {
+    object-position: center 35%;
+}
+
+.candidate-card:hover img {
+    transform: scale(1.03);
 }
 
 .candidate-card .card-body {
-    padding: 1.5rem;
+    padding: 1.75rem;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.95), white);
+    backdrop-filter: blur(8px);
 }
 
 .candidate-card .card-title {
     color: var(--primary-color);
     font-weight: 700;
     margin-bottom: 0.5rem;
-    font-size: 1.25rem;
+    font-size: 1.3rem;
+    letter-spacing: -0.01em;
 }
 
 .candidate-card .card-subtitle {
-    color: #555;
+    color: var(--secondary-color);
     font-size: 1rem;
     margin-bottom: 1rem;
     font-weight: 500;
+    opacity: 0.9;
+}
+
+.candidate-card .card-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    opacity: 0.85;
 }
 
 .candidate-card .btn {
@@ -145,14 +259,15 @@ a:hover {
 
 /* Candidate Modals */
 .modal-content {
-    border-radius: 12px;
+    border-radius: var(--border-radius-lg);
     border: none;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
 }
 
 .modal-header {
-    border-bottom: 2px solid var(--primary-color);
-    padding: 1.5rem 2rem;
-    background-color: var(--light-bg);
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    padding: 1.5rem;
+    background: white;
 }
 
 .modal-body {
@@ -205,8 +320,8 @@ a:hover {
 
 /* Footer */
 footer {
-    background-color: var(--primary-color) !important;
-    padding: 2rem 0 !important;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)) !important;
+    padding: 3rem 0 !important;
 }
 
 footer p {
@@ -216,31 +331,34 @@ footer p {
 
 /* Buttons */
 .btn {
-    padding: 0.75rem 1.5rem;
+    padding: 0.875rem 1.75rem;
     font-weight: 600;
-    border-radius: 6px;
+    font-size: 0.95rem;
+    border-radius: var(--border-radius-sm);
     transition: all 0.3s ease;
+    letter-spacing: -0.01em;
 }
 
 .btn-primary {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    border: none;
+    box-shadow: 0 4px 15px rgba(0,107,63,0.2);
 }
 
 .btn-primary:hover {
-    background-color: var(--secondary-color);
-    border-color: var(--secondary-color);
     transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,107,63,0.25);
+    background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
 }
 
 .btn-outline-primary {
+    border: 2px solid var(--primary-color);
     color: var(--primary-color);
-    border-color: var(--primary-color);
 }
 
 .btn-outline-primary:hover {
-    background-color: var(--primary-color);
-    color: white;
+    background: var(--primary-color);
+    border-color: var(--primary-color);
     transform: translateY(-2px);
 }
 
@@ -300,7 +418,7 @@ footer p {
     }
     
     .candidate-card img {
-        height: 200px;
+        height: 250px;
     }
 
     h1 {
@@ -336,4 +454,100 @@ footer p {
 
 .fade-in {
     animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes gradientFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes slideInRight {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes floatAnimation {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* FAQ Section */
+.faq-section {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.accordion-item {
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 8px !important;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.accordion-button {
+    padding: 1.25rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    background-color: white;
+    box-shadow: none !important;
+    transition: all 0.3s ease;
+}
+
+.accordion-button:not(.collapsed) {
+    color: var(--secondary-color);
+    background-color: rgba(0,123,190,0.05);
+}
+
+.accordion-button::after {
+    transition: transform 0.3s ease;
+}
+
+.accordion-body {
+    padding: 1.25rem;
+    background-color: white;
+}
+
+.accordion-body ul {
+    padding-left: 1.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+}
+
+.accordion-body li {
+    margin-bottom: 0.5rem;
+}
+
+.accordion-body a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.accordion-body a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* Section Styles */
+section {
+    padding: 6rem 0;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+/* Cards and Content */
+.card {
+    border: none;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--card-shadow);
+    background: white;
+    overflow: hidden;
 }
