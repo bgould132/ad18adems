@@ -151,11 +151,11 @@ const candidates = [
         id: "genice",
         title: "Anti-Trafficking Activist",
         shortBio: "15+ years of advocacy against human trafficking, founder of Abolitionist Mom and key contributor to California's trafficking prevention legislation.",
-        bio: `<p>For over 15 years, Genice has worked tirelessly to raise awareness and address human trafficking in Alameda County and across California. She is a proven community leader, parent, and small business owner who has lived in Oakland for 24 years, dedicated to driving real change.</p>
+        bio: `<p>For over 15 years, Genice has worked tirelessly to raise awareness and address human trafficking and youth homelessness in Alameda County and across California. She is a proven community leader, parent, and small business owner who has lived in Oakland for 24 years, dedicated to driving real change.</p>
               
               <h5 class="mt-4">Key Accomplishments & Initiatives</h5>
               <ul>
-                  <li><b>Led Prevention Campaigns:</b> Focused on raising awareness and preventing human trafficking through various initiatives.</li>
+                  <li><b>Led Prevention Campaigns:</b> Focused on raising awareness and preventing human trafficking and youth homelessness through various initiatives.</li>
                   <li><b>Policy Advocacy:</b> Supported policy efforts such as Prop 35 (Human Trafficking Initiative) and SB1165.</li>
                   <li><b>SB1165 Champion:</b> Instrumental in making California the first state to require sexual abuse and trafficking prevention education in public schools.</li>
                   <li><b>Youth Collaboration:</b> Collaborated with youth leaders on homelessness issues to expand support for survivors of trafficking.</li>

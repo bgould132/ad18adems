@@ -57,6 +57,7 @@ a:hover {
     font-weight: 700;
     font-size: 1.2rem;
     color: var(--primary-color) !important;
+    line-height: 1.2;
 }
 
 .nav-link {
@@ -70,6 +71,20 @@ a:hover {
 .nav-link:hover {
     opacity: 1;
     transform: translateY(-1px);
+}
+
+/* Add these new navbar mobile styles */
+.navbar-toggler {
+    border: none;
+    padding: 0.5rem;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 107, 63, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
 }
 
 /* Hero Section */
@@ -399,11 +414,11 @@ footer p {
 @media (max-width: 768px) {
     .hero {
         text-align: left;
-        padding: 4rem 0;
+        padding: 3rem 0;
     }
     
     .hero .btn {
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
         width: 100%;
     }
     
@@ -414,7 +429,7 @@ footer p {
     }
 
     .candidate-card {
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
     }
     
     .candidate-card img {
@@ -422,15 +437,67 @@ footer p {
     }
 
     h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
 
     h2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+    }
+
+    .navbar-brand {
+        font-size: 0.95rem;
+        max-width: 70%;
+        white-space: normal;
+        line-height: 1.2;
+    }
+
+    /* Show shorter text on very small screens */
+    @media (max-width: 400px) {
+        .navbar-brand {
+            font-size: 0.9rem;
+        }
+        .navbar-brand .full-text {
+            display: none;
+        }
+        .navbar-brand .short-text {
+            display: inline;
+        }
+    }
+
+    .navbar-collapse {
+        background: rgba(255, 255, 255, 0.98);
+        padding: 1rem;
+        border-radius: var(--border-radius-sm);
+        margin-top: 0.5rem;
+    }
+
+    section {
+        padding: 4rem 0;
+    }
+
+    #voting, #why-adems {
+        padding: 4rem 0;
+    }
+
+    footer {
+        padding: 2rem 0 !important;
+    }
+
+    .modal-dialog {
+        max-width: 95%;
+        margin: 1rem auto;
     }
 
     .modal-body {
-        padding: 1.5rem;
+        padding: 1rem;
+    }
+
+    @media (max-width: 575px) {
+        .col-sm-6 {
+            width: 100%;
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
     }
 
     #scrollToTop {
