@@ -67,15 +67,8 @@ const candidates = [
         name: "Nate Hanson",
         id: "nate",
         title: "Affordable Housing Developer",
-        shortBio: "Leading affordable housing development at Related California, spearheading a 600-unit project at Jack London Square.",
+        shortBio: "Working on affordable housing at Related California, spearheading a 600-unit project at Jack London Square.",
         bio: `<p>Nate is running as part of the Housing and Climate Progressive Democratic Slate because he is committed to helping to make the Democratic Party work for everyday Californians. We need real solutions to the housing and homelessness crisis, comprehensive and just public safety, and meeting the needs of our most vulnerable residents, our small businesses, and our working people.</p>
-              <h5 class="mt-4">Current Roles</h5>
-              <ul>
-                  <li>Works at Related California's Northern California affordable development team</li>
-                  <li>Spearheading efforts to build a 6-phase, 600-unit affordable housing project at Jack London Square</li>
-                  <li>Sits on the ULI San Francisco Public Private Partnerships Local Product Council</li>
-                  <li>Sits on the Bay Area Council's Housing Committee</li>
-              </ul>
               <h5 class="mt-4">Key Accomplishments</h5>
               <ul>
                   <li>Spearheading efforts to build a 6-phase, 600-unit affordable housing project at Jack London Square</li>
@@ -93,7 +86,7 @@ const candidates = [
                   <li>Seniors whose homes were destroyed by wildfires caused by the climate crisis</li>
                   <li>Families at risk of homelessness</li>
               </ul>
-              <p>His mission is to help protect and house the most vulnerable in our community. Living in East Oakland and being a proud parent of an Oakland Unified School District student, he's committed to a strong public school system so that every child has access to opportunity, regardless of their starting point.</p>`,
+              <p>His mission is to help protect and house the most vulnerable in our community. As an East Oaklander and proud parent of an Oakland Unified School District student, he's committed to a strong public school system so that every child has access to opportunity, regardless of their starting point.</p>`,
         imageExt: "jpg"
     },
     {
